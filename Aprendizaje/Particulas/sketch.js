@@ -1,5 +1,5 @@
 let particles = [];
-const N = 120;
+const N = 300;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -12,7 +12,6 @@ function setup() {
 function draw() {
   background(230, 40, 8, 0.15); // fondo con transparencia = rastro
 
-  // líneas entre partículas cercanas
   for (let i = 0; i < particles.length; i++) {
     for (let j = i + 1; j < particles.length; j++) {
       let d = dist(particles[i].x, particles[i].y, particles[j].x, particles[j].y);
